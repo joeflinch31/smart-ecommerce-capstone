@@ -1,4 +1,26 @@
 ## Week 2 - UI/UX Design and Frontend ✅ COMPLETE
+
+### Completed Tasks:
+- ✅ Figma wireframes (Homepage, Login, Register, Cart)
+- ✅ HTML/CSS implementation (4 pages)
+- ✅ Responsive product grid with 6 products
+- ✅ Password validation on register page
+- ✅ GUI screenshots exported from Figma
+- ✅ Browser screenshots taken
+- ✅ Project proposal written
+- ✅ Week 2 logbook and report completed
+
+### Files Added:
+- `week2/index.html` - Product catalog homepage
+- `week2/login.html` - Login page
+- `week2/register.html` - Registration with validation
+- `week2/cart.html` - Shopping cart page
+- `week2/css/style.css` - Main stylesheet
+- `week2/images/` - Product images
+- `week2/proposal.md` - Project proposal
+- `Week2_Report.docx` - Complete report
+
+### Next: Week 3 - Backend Development (PHP + MySQL)## Week 2 - UI/UX Design and Frontend ✅ COMPLETE
 - Figma wireframes (Homepage, Login, Register, Cart)
 - HTML/CSS implementation
 - Responsive product grid (6 products)
