@@ -9,6 +9,28 @@
 - Professional folder structure (css/, includes/, images/, database/)
 - Database `week4db` with users table
 - Week 4 screenshots (5 figures)
+- Week 4 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
+
+- PHP form processing (`process.php`)
+- Contact form with validation (`contact.php`)
+- User registration with password hashing (`register.php`)
+- User login with session management (`login.php`)
+- Protected dashboard (`dashboard.php`)
+- Logout functionality (`logout.php`)
+- Professional folder structure (css/, includes/, images/, database/)
+- Database `week4db` with users table
+- Week 4 screenshots (5 figures)
+- Week 4 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
+
+- PHP form processing (`process.php`)
+- Contact form with validation (`contact.php`)
+- User registration with password hashing (`register.php`)
+- User login with session management (`login.php`)
+- Protected dashboard (`dashboard.php`)
+- Logout functionality (`logout.php`)
+- Professional folder structure (css/, includes/, images/, database/)
+- Database `week4db` with users table
+- Week 4 screenshots (5 figures)
 - Week 4 logbook and report## Week 3 - JavaScript & PHP Foundations ✅ COMPLETE
 
 - JavaScript form validation (name, email, password, confirm)
