@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,93 +6,36 @@ x<!DOCTYPE html>
     <title>Shopping Cart - My E-Store</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .cart-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        .cart-table th, .cart-table td {
-            border: 1px solid #ddd;
-            padding: 0.75rem;
-            text-align: center;
-        }
-        .cart-table th {
-            background: #333;
-            color: white;
-        }
-        .cart-summary {
-            margin-top: 1.5rem;
-            text-align: right;
-        }
-        .checkout-btn {
-            background: #28a745;
-            padding: 0.75rem 1.5rem;
-            font-size: 1.1rem;
-        }
-        .checkout-btn:hover {
-            background: #218838;
-        }
-        .remove-btn {
-            background: #dc3545;
-            padding: 0.3rem 0.8rem;
-        }
-        .remove-btn:hover {
-            background: #c82333;
-        }
+        .cart-table { width: 100%; border-collapse: collapse; background: white; }
+        .cart-table th, .cart-table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        .cart-table th { background: #333; color: white; }
+        .cart-summary { text-align: right; margin-top: 20px; }
+        .checkout-btn { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .remove-btn { background: #dc3545; color: white; padding: 5px 10px; border: none; cursor: pointer; }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html">🛒 My E-Store</a>
-        </div>
+        <div class="logo"><a href="index.html">🛒 My E-Store</a></div>
         <nav>
             <a href="index.html">Home</a>
             <a href="cart.html">Cart</a>
             <a href="login.php">Login</a>
             <a href="register.php">Register</a>
-            <a href="dashboard.php">Dashboard</a>
-            <a href="logout.php">Logout</a>
+            <a href="contact.php">Contact</a>
         </nav>
     </header>
-
     <main>
         <h2>Your Shopping Cart</h2>
         <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+            <thead><tr><th>Product</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr></thead>
             <tbody>
-                <tr>
-                    <td>Wireless Mouse</td>
-                    <td>$25.99</td>
-                    <td><input type="number" value="1" min="1" style="width:60px"></td>
-                    <td>$25.99</td>
-                    <td><button class="remove-btn">Remove</button></td>
-                </tr>
-                <tr>
-                    <td>Gaming Headset</td>
-                    <td>$89.99</td>
-                    <td><input type="number" value="1" min="1" style="width:60px"></td>
-                    <td>$89.99</td>
-                    <td><button class="remove-btn">Remove</button></td>
-                </tr>
+                <tr><td>Wireless Mouse</td><td>$25.99</td><td><input type="number" value="1" min="1" style="width:60px"></td><td>$25.99</td><td><button class="remove-btn">Remove</button></td></tr>
+                <tr><td>Gaming Headset</td><td>$89.99</td><td><input type="number" value="1" min="1" style="width:60px"></td><td>$89.99</td><td><button class="remove-btn">Remove</button></td></tr>
             </tbody>
         </table>
-        <div class="cart-summary">
-            <h3>Total: $115.98</h3>
-            <button class="checkout-btn">Proceed to Checkout</button>
-        </div>
+        <div class="cart-summary"><h3>Total: $115.98</h3><button class="checkout-btn">Proceed to Checkout</button></div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 My E-Store. All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2025 My E-Store</p></footer>
 </body>
 </html>
