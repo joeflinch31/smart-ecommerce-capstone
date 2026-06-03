@@ -1,4 +1,13 @@
-## Week 4 - Server-Side Components & Backend ✅ COMPLETE
+## Week 5 - Database & CRUD Operations ✅ COMPLETE
+
+- Created `week5db` database with products, users, orders, order_items tables
+- Dynamic product catalog from database (`index.php`)
+- Admin CRUD panel (Add, Edit, Delete products)
+- Shopping cart with session storage (`cart.php`)
+- Checkout with stock validation
+- Order confirmation page
+- Orders saved to database
+- Week 5 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
 
 - PHP form processing (`process.php`)
 - Contact form with validation (`contact.php`)
