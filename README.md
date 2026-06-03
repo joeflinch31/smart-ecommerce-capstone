@@ -7,6 +7,15 @@
 - Database connection test (Connected Successfully)
 - User registration with password hashing
 - User login with session management
+- Week 3 logbook, report, and screenshots## Week 3 - JavaScript & PHP Foundations ✅ COMPLETE
+
+- JavaScript form validation (name, email, password, confirm)
+- Password strength checker (Weak/Medium/Strong)
+- DOM manipulation (live text preview, dynamic menu)
+- PHP syntax practice (variables, loops, arrays, functions)
+- Database connection test (Connected Successfully)
+- User registration with password hashing
+- User login with session management
 - Week 3 logbook, report, and screenshots## Week 2 - UI/UX Design and Frontend ✅ COMPLETE
 
 ### Completed Tasks:
