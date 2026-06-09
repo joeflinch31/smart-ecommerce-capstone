@@ -1,4 +1,18 @@
-## Week 5 - Database & CRUD Operations ✅ COMPLETE
+## 📄 COMPLETE REPORT
+
+The full combined weekly report (Weeks 1-5) is available here:
+- [Combined_Report.docx](Combined_Report.docx)
+
+## 📊 REPORT CONTENTS
+
+| Week | Topic | Pages | Figures |
+|------|-------|-------|---------|
+| Week 1 | Environment Setup | 2 | 4 |
+| Week 2 | UI/UX & Frontend | 3 | 10 |
+| Week 3 | JavaScript & PHP | 2 | 7 |
+| Week 4 | Server-Side | 2 | 6 |
+| Week 5 | Database & CRUD | 3 | 10 |
+| **TOTAL** | | **~12 pages** | **37 figures** |## Week 5 - Database & CRUD Operations ✅ COMPLETE
 
 - Created `week5db` database with products, users, orders, order_items tables
 - Dynamic product catalog from database (`index.php`)
