@@ -70,11 +70,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             var message = document.getElementById('password-match-message');
             
             if (password === confirm && password !== '') {
-                message.innerHTML = '✓ Passwords match';
-                message.className = 'password-match match';
+                message.innerHTML = 'karibu bosie';
+                message.className = 'karibu bosie';
                 return true;
             } else if (password !== '' && confirm !== '') {
-                message.innerHTML = '✗ Passwords do not match';
+                message.innerHTML = 'wacha ufala';
                 message.className = 'password-match mismatch';
                 return false;
             } else {

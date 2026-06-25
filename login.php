@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error = "Invalid password!";
         }
     } else {
-        $error = "User not found!";
+        $error = "sema wantam nikupatie password";
     }
 }
 ?>
