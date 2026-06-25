@@ -1,3 +1,33 @@
+# 🛒 Smart E-Commerce Capstone Project
+
+**Course:** BIT3208 - Advanced Web Design and Development
+
+**GitHub:** https://github.com/joeflinch31/smart-ecommerce-capstone
+
+---
+
+## ✅ Weekly Progress
+
+| Week | Topic | Status |
+|------|-------|--------|
+| Week 1 | Environment Setup | ✅ |
+| Week 2 | UI/UX & Frontend | ✅ |
+| Week 3 | JavaScript & PHP | ✅ |
+| Week 4 | Authentication | ✅ |
+| Week 5 | E-Commerce CRUD | ✅ |
+| Week 6 | Admin Dashboard, User & Order Management | ✅ |
+
+---
+
+## 🔐 Admin Access
+
+| Username | Password | Role |
+|----------|----------|------|
+| josephkinuthia | password | Admin |
+
+---
+
+## 📁 Folder Structure
 ## 📄 COMPLETE REPORT
 
 The full combined weekly report (Weeks 1-5) is available here:
@@ -107,3 +137,17 @@ A fully functional e-commerce web application built with **PHP**, **MySQL**, **H
 ---
 
 ## 📁 Project Structure
+
+---
+
+## 🚀 How to Run
+
+1. Start XAMPP (Apache + MySQL)
+2. Import `week5db.sql` into phpMyAdmin
+3. Open `http://localhost/week5/index.php`
+
+---
+
+## 👨‍💻 Author
+
+**GitHub:** [@joeflinch31](https://github.com/joeflinch31)
