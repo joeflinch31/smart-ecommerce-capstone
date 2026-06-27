@@ -1,14 +1,8 @@
-## Week 7 - Advanced Authentication ✅ COMPLETE
+# 🛒 Smart E-Commerce Capstone Project
 
-- Remember Me (Persistent Login)
-- User Profile Management
-- Password Reset (Forgot Password)
-- Email Verification
-- Two-Factor Authentication (2FA)
-- Logout Confirmation Popup
-- Week 7 screenshots, logbook, and report# 🛒 Smart E-Commerce Capstone Project
-
-**Course:** BIT3208 - Advanced Web Design and Development
+**Course:** BIT3208 - Advanced Web Design and Development  
+**Student:** JOSEPH KINUTHIA  
+**Date:** June 27, 2026  
 
 **GitHub:** https://github.com/joeflinch31/smart-ecommerce-capstone
 
@@ -18,12 +12,14 @@
 
 | Week | Topic | Status |
 |------|-------|--------|
-| Week 1 | Environment Setup | ✅ |
-| Week 2 | UI/UX & Frontend | ✅ |
-| Week 3 | JavaScript & PHP | ✅ |
-| Week 4 | Authentication | ✅ |
-| Week 5 | E-Commerce CRUD | ✅ |
-| Week 6 | Admin Dashboard, User & Order Management | ✅ |
+| Week 1 | Environment Setup & Database | ✅ |
+| Week 2 | UI/UX Design & Frontend | ✅ |
+| Week 3 | JavaScript & PHP Foundations | ✅ |
+| Week 4 | Server-Side & Authentication | ✅ |
+| Week 5 | E-Commerce CRUD Operations | ✅ |
+| Week 6 | Admin Panel CRUD Integration | ✅ |
+| Week 7 | Advanced Authentication | ✅ |
+| Week 8 | Responsive Web Design | ✅ |
 
 ---
 
@@ -32,130 +28,87 @@
 | Username | Password | Role |
 |----------|----------|------|
 | josephkinuthia | password | Admin |
+| admin | password | Admin |
 
 ---
 
-## 📁 Folder Structure
-## 📄 COMPLETE REPORT
+## 🛠️ Technologies Used
 
-The full combined weekly report (Weeks 1-5) is available here:
-- [Combined_Report.docx](Combined_Report.docx)
+- PHP 8.2
+- MySQL (MariaDB)
+- HTML5, CSS3, JavaScript
+- XAMPP (Apache)
+- Figma
+- Git & GitHub
 
-## 📊 REPORT CONTENTS
+---
 
-| Week | Topic | Pages | Figures |
-|------|-------|-------|---------|
-| Week 1 | Environment Setup | 2 | 4 |
-| Week 2 | UI/UX & Frontend | 3 | 10 |
-| Week 3 | JavaScript & PHP | 2 | 7 |
-| Week 4 | Server-Side | 2 | 6 |
-| Week 5 | Database & CRUD | 3 | 10 |
-| **TOTAL** | | **~12 pages** | **37 figures** |## Week 5 - Database & CRUD Operations ✅ COMPLETE
+## 🚀 How to Run Locally
 
-- Created `week5db` database with products, users, orders, order_items tables
-- Dynamic product catalog from database (`index.php`)
-- Admin CRUD panel (Add, Edit, Delete products)
-- Shopping cart with session storage (`cart.php`)
-- Checkout with stock validation
-- Order confirmation page
-- Orders saved to database
-- Week 5 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
-
-- PHP form processing (`process.php`)
-- Contact form with validation (`contact.php`)
-- User registration with password hashing (`register.php`)
-- User login with session management (`login.php`)
-- Protected dashboard (`dashboard.php`)
-- Logout functionality (`logout.php`)
-- Professional folder structure (css/, includes/, images/, database/)
-- Database `week4db` with users table
-- Week 4 screenshots (5 figures)
-- Week 4 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
-
-- PHP form processing (`process.php`)
-- Contact form with validation (`contact.php`)
-- User registration with password hashing (`register.php`)
-- User login with session management (`login.php`)
-- Protected dashboard (`dashboard.php`)
-- Logout functionality (`logout.php`)
-- Professional folder structure (css/, includes/, images/, database/)
-- Database `week4db` with users table
-- Week 4 screenshots (5 figures)
-- Week 4 logbook and report## Week 4 - Server-Side Components & Backend ✅ COMPLETE
-
-- PHP form processing (`process.php`)
-- Contact form with validation (`contact.php`)
-- User registration with password hashing (`register.php`)
-- User login with session management (`login.php`)
-- Protected dashboard (`dashboard.php`)
-- Logout functionality (`logout.php`)
-- Professional folder structure (css/, includes/, images/, database/)
-- Database `week4db` with users table
-- Week 4 screenshots (5 figures)
-- Week 4 logbook and report## Week 3 - JavaScript & PHP Foundations ✅ COMPLETE
-
-- JavaScript form validation (name, email, password, confirm)
-- Password strength checker (Weak/Medium/Strong)
-- DOM manipulation (live text preview, dynamic menu)
-- PHP syntax practice (variables, loops, arrays, functions)
-- Database connection test (Connected Successfully)
-- User registration with password hashing
-- User login with session management
-- Week 3 logbook, report, and screenshots## Week 3 - JavaScript & PHP Foundations ✅ COMPLETE
-
-- JavaScript form validation (name, email, password, confirm)
-- Password strength checker (Weak/Medium/Strong)
-- DOM manipulation (live text preview, dynamic menu)
-- PHP syntax practice (variables, loops, arrays, functions)
-- Database connection test (Connected Successfully)
-- User registration with password hashing
-- User login with session management
-- Week 3 logbook, report, and screenshots## Week 2 - UI/UX Design and Frontend ✅ COMPLETE
-
-### Completed Tasks:
-- ✅ Figma wireframes (Homepage, Login, Register, Cart)
-- ✅ HTML/CSS implementation (4 pages)
-- ✅ Responsive product grid with 6 products
-- ✅ Password validation on register page
-- ✅ GUI screenshots exported from Figma
-- ✅ Browser screenshots taken
-- ✅ Project proposal written
-- ✅ Week 2 logbook and report completed
-
-### Files Added:
-- `week2/index.html` - Product catalog homepage
-- `week2/login.html` - Login page
-- `week2/register.html` - Registration with validation
-- `week2/cart.html` - Shopping cart page
-- `week2/css/style.css` - Main stylesheet
-- `week2/images/` - Product images
-- `week2/proposal.md` - Project proposal
-- `Week2_Report.docx` - Complete report
-
-### Next: Week 3 - Backend Development (PHP + MySQL)## Week 2 - UI/UX Design and Frontend ✅ COMPLETE
-- Figma wireframes (Homepage, Login, Register, Cart)
-- HTML/CSS implementation
-- Responsive product grid (6 products)
-- Password validation on register page
-- GUI and browser screenshots
-- Project proposal and logbook# 🛒 Smart E-Commerce Capstone Project
-
-A fully functional e-commerce web application built with **PHP**, **MySQL**, **HTML/CSS**, and **JavaScript**. This project demonstrates server-side programming, database integration, user authentication, and CRUD operations.
+1. Install [XAMPP](https://www.apachefriends.org/)
+2. Start Apache and MySQL
+3. Clone or copy to `C:\xampp\htdocs\`
+4. Import `week5db.sql` into phpMyAdmin
+5. Open `http://localhost/week5/index.php`
 
 ---
 
 ## 📁 Project Structure
+week5/
+├── admin/
+│ ├── admin_dashboard.php
+│ ├── products.php
+│ ├── users.php
+│ └── orders.php
+├── css/
+│ └── style.css
+├── images/
+│ ├── mouse.jpg
+│ ├── keyboard.jpg
+│ ├── usbhub.jpg
+│ ├── stand.jpg
+│ ├── webcam.jpg
+│ └── headset.jpg
+├── includes/
+│ └── db.php
+├── index.php
+├── cart.php
+├── login.php
+├── register.php
+├── dashboard.php
+├── profile.php
+├── orders.php
+├── forgot_password.php
+├── reset_password.php
+├── verify_email.php
+├── 2fa.php
+└── logout.php
+
+text
 
 ---
 
-## 🚀 How to Run
+## 📸 Screenshots Summary
 
-1. Start XAMPP (Apache + MySQL)
-2. Import `week5db.sql` into phpMyAdmin
-3. Open `http://localhost/week5/index.php`
+| Week | Figures |
+|------|---------|
+| Week 1 | 4 |
+| Week 2 | 10 |
+| Week 3 | 7 |
+| Week 4 | 6 |
+| Week 5 | 10 |
+| Week 6 | 5 |
+| Week 7 | 7 |
+| Week 8 | 4 |
+| **TOTAL** | **53** |
 
 ---
 
 ## 👨‍💻 Author
 
 **GitHub:** [@joeflinch31](https://github.com/joeflinch31)
+
+---
+
+*Last updated: June 27, 2026*
+
