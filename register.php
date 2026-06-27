@@ -10,31 +10,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+    $confirm = $_POST['confirm_password'];
     
-    // Check if passwords match
-    if ($password !== $confirm_password) {
+    if (empty($fullname) || empty($email) || empty($username) || empty($password)) {
+        $error = "All fields are required!";
+    } elseif ($password !== $confirm) {
         $error = "Passwords do not match!";
     } elseif (strlen($password) < 6) {
         $error = "Password must be at least 6 characters!";
     } else {
-        // Check if username or email already exists
-        $check_sql = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
-        $check_result = mysqli_query($conn, $check_sql);
-        
-        if (mysqli_num_rows($check_result) > 0) {
+        $check = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' OR email='$email'");
+        if (mysqli_num_rows($check) > 0) {
             $error = "Username or email already exists!";
         } else {
-            // Hash the password
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $hashed = password_hash($password, PASSWORD_DEFAULT);
             
-            // Insert user into database
-            $insert_sql = "INSERT INTO users (fullname, email, username, password) 
-                           VALUES ('$fullname', '$email', '$username', '$hashed_password')";
+            // generateToken() is now in db.php
+            $verification_token = generateToken();
             
-            if (mysqli_query($conn, $insert_sql)) {
-                $success = "Registration successful! Redirecting to login...";
-                header("refresh:2; url=login.php");
+            $sql = "INSERT INTO users (fullname, email, username, password, verification_token, verified) 
+                    VALUES ('$fullname', '$email', '$username', '$hashed', '$verification_token', 0)";
+            
+            if (mysqli_query($conn, $sql)) {
+                $verify_link = "http://localhost/week5/verify_email.php?token=$verification_token";
+                $success = "✅ Registration successful!<br>
+                            Please verify your email:<br>
+                            <a href='$verify_link' style='color:#ff9900;'>📧 Click here to verify your email</a><br>
+                            <small>After verification, <a href='login.php'>login here</a></small>";
             } else {
                 $error = "Registration failed: " . mysqli_error($conn);
             }
@@ -51,54 +53,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Register - My E-Store</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .error { color: red; text-align: center; margin-bottom: 1rem; }
-        .success { color: green; text-align: center; margin-bottom: 1rem; }
-        .form-container { max-width: 500px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label { display: block; margin-bottom: 0.3rem; font-weight: bold; }
-        .form-group input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
-        button[type="submit"] { width: 100%; background: #333; color: white; padding: 0.7rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
-        button[type="submit"]:hover { background: #555; }
-        .password-match { font-size: 0.8rem; margin-top: 0.3rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        .error { background: #f8d7da; color: #721c24; padding: 12px; border-radius: 4px; margin-bottom: 15px; border: 1px solid #f5c6cb; text-align: center; }
+        .success { background: #d4edda; color: #155724; padding: 12px; border-radius: 4px; margin-bottom: 15px; border: 1px solid #c3e6cb; text-align: center; }
+        .success a { color: #ff9900; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; }
+        input:focus { outline: none; border-color: #ff9900; }
+        .btn { width: 100%; background: #ff9900; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #e68a00; }
+        .links { text-align: center; margin-top: 15px; }
+        .links a { color: #ff9900; text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        .password-match { font-size: 0.85rem; margin-top: 5px; }
         .match { color: green; }
         .mismatch { color: red; }
+        @media (max-width: 600px) { .container { margin: 20px; padding: 20px; } }
     </style>
-    <script>
-        function checkPasswordMatch() {
-            var password = document.getElementById('password').value;
-            var confirm = document.getElementById('confirm_password').value;
-            var message = document.getElementById('password-match-message');
-            
-            if (password === confirm && password !== '') {
-                message.innerHTML = 'karibu bosie';
-                message.className = 'karibu bosie';
-                return true;
-            } else if (password !== '' && confirm !== '') {
-                message.innerHTML = 'wacha ufala';
-                message.className = 'password-match mismatch';
-                return false;
-            } else {
-                message.innerHTML = '';
-                return false;
-            }
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">🛒 My E-Store</a>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
-            <a href="login.php">Login</a>
-            <a href="register.php">Register</a>
-        </nav>
-    </header>
-
-    <div class="form-container">
-        <h2>Create New Account</h2>
+    <div class="container">
+        <h2>📝 Create New Account</h2>
         
         <?php if($error): ?>
             <div class="error"><?php echo $error; ?></div>
@@ -108,43 +87,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="success"><?php echo $success; ?></div>
         <?php endif; ?>
         
-        <form method="POST" action="">
+        <?php if(empty($success)): ?>
+        <form method="POST">
             <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="fullname" required>
+                <label>Full Name *</label>
+                <input type="text" name="fullname" placeholder="Enter your full name" required>
             </div>
-            
             <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" required>
+                <label>Email Address *</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
             </div>
-            
             <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" required>
+                <label>Username *</label>
+                <input type="text" name="username" placeholder="Choose a username" required>
             </div>
-            
             <div class="form-group">
-                <label>Password (min 6 characters)</label>
-                <input type="password" id="password" name="password" onkeyup="checkPasswordMatch()" required>
+                <label>Password (min 6 characters) *</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
             </div>
-            
             <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPasswordMatch()" required>
+                <label>Confirm Password *</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
                 <div id="password-match-message" class="password-match"></div>
             </div>
-            
-            <button type="submit">Register</button>
+            <button type="submit" class="btn">Register</button>
         </form>
-        
-        <p style="text-align:center; margin-top:1rem;">
+        <div class="links">
             Already have an account? <a href="login.php">Login here</a>
-        </p>
+        </div>
+        <?php endif; ?>
     </div>
 
-    <footer>
-        <p>&copy; 2025 My E-Store. All rights reserved.</p>
-    </footer>
+    <script>
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm_password');
+        const message = document.getElementById('password-match-message');
+
+        function checkPasswordMatch() {
+            if (password.value === confirmPassword.value && password.value !== '') {
+                message.innerHTML = '✅ Passwords match';
+                message.className = 'password-match match';
+            } else if (password.value !== '' && confirmPassword.value !== '') {
+                message.innerHTML = '❌ Passwords do not match';
+                message.className = 'password-match mismatch';
+            } else {
+                message.innerHTML = '';
+            }
+        }
+
+        password.addEventListener('input', checkPasswordMatch);
+        confirmPassword.addEventListener('input', checkPasswordMatch);
+    </script>
 </body>
 </html>
