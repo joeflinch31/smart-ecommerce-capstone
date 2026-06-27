@@ -1,4 +1,12 @@
-# 🛒 Smart E-Commerce Capstone Project
+## Week 7 - Advanced Authentication ✅ COMPLETE
+
+- Remember Me (Persistent Login)
+- User Profile Management
+- Password Reset (Forgot Password)
+- Email Verification
+- Two-Factor Authentication (2FA)
+- Logout Confirmation Popup
+- Week 7 screenshots, logbook, and report# 🛒 Smart E-Commerce Capstone Project
 
 **Course:** BIT3208 - Advanced Web Design and Development
 
